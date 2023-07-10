@@ -27,6 +27,6 @@ Start-Process $PYCHARM_INSTALLER_FILE -ArgumentList $PYCHARM_INSTALL_ARGS -Wait
 
 Write-Log "Add PyCharm to PATH environment variable and creating desktop shortcut"
 [Environment]::SetEnvironmentVariable("PATH", "$Env:PATH;$PYCHARM_INSTALL_PATH\bin", [EnvironmentVariableTarget]::Machine)
-New-Item -ItemType SymbolicLink -Path "~\Desktop\PyCharm Community Edition.lnk" -Target  "$PYCHARM_INSTALL_PATH\bin\pycharm64.exe
+New-Item -ItemType SymbolicLink -Path "~\Desktop\PyCharm Community Edition.lnk" -Target  "$PYCHARM_INSTALL_PATH\bin\pycharm64.exe"
 
 Write-Log "add_pycharm script completed"
